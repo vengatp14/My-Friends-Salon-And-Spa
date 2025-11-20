@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Friends Salon And Spa | Premium Luxury Spa in Chennai</title>
+  <meta name="description" content="My Friends Salon And Spa offers luxury spa treatments in Chennai. Book royal massages and beauty therapies in a modern, elegant atmosphere.">
+  <meta property="og:title" content="My Friends Salon And Spa"/>
+  <meta property="og:description" content="International standard luxury spa in Chennai. Book now for premium treatments and relaxation!"/>
+  <meta property="og:url" content="https://MyFriendsSalonAndSpa.com"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="your-og-image-url.jpg"/>
+  <!-- LocalBusiness Schema (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "My Friends Salon And Spa",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Dev Apartments, 5, Prithvi Ave 1st St, Demonte Colony, Abiramapuram",
+      "addressLocality": "Chennai",
+      "postalCode": "600018",
+      "addressCountry": "IN"
+    },
+    "telephone": "+917299012666",
+    "url": "https://MyFriendsSalonAndSpa.com",
+    "image": "your-og-image-url.jpg",
+    "priceRange": "₹₹₹"
+  }
+  </script>
+  <!-- Favicon (Optional) -->
+  <link rel="icon" href="spa-icon.png">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animate On Scroll -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Icons & Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS: Glassmorphism, Theme Colors -->
+  <style>
+    :root {
+      --royal-blue: #000000;
+      --gold: #d4af37;
+      --glass-blur: rgba(13,27,76,0.45);
+      --glass-gradient: linear-gradient(120deg, rgba(13, 27, 76, 0.849), rgba(100, 77, 0, 0.849));
+      --gold-glow: 0 0 18px 3px #d4af37dd;
+    }
+    body {
+      background: var(--royal-blue);
+      color: #fff;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+ /* Only for .glass class inputs/selects in modal */
+#bookingForm input.glass,
+#bookingForm select.glass {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 0 8px #fff, 0 0 12px #fff5;
+  border: 1.5px solid #fff9;
+  background: var(--glass-gradient);
+}
+.btn-close {
+   height: 50px;
+    --bs-btn-close-bg: url(https://static.vecteezy.com/system/resources/thumbnails/063/054/828/small/gold-cross-icon-3d-glossy-golden-x-symbol-with-metallic-shine-and-shadowed-style-for-cancel-close-deny-exit-and-error-related-design-concepts-png.png);
+    --bs-btn-close-opacity: 0.5;}
+
+
+#bookingForm input.glass::placeholder {
+  color: #fff;
+  opacity: 0.73;
+  text-shadow: 0 0 5px #fff7;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+}
+    .glass {
+      background: var(--glass-gradient);
+      box-shadow: 0 8px 32px 0 rgba(13,27,76,0.27);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 1.5rem;
+      border: 1.5px solid rgba(212,175,55,0.15);
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--royal-blue);
+      border: none;
+      font-weight: 600;
+      box-shadow: var(--gold-glow);
+      transition: all 0.22s;
+      animation: pulse 2s infinite;
+    }
+    .btn-gold:hover, .btn-gold:focus {
+      color: #fff;
+      background: linear-gradient(90deg, var(--gold) 70%, #fff8dc 100%);
+      box-shadow: 0 0 36px 7px #d4af3799;
+      transform: scale(1.03);
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 #d4af3750;}
+      70% { box-shadow: 0 0 0 18px #d4af3700;}
+      100% { box-shadow: 0 0 0 0 #d4af3750;}
+    }
+    .gold-text { color: var(--gold); }
+    .icon-gold { color: var(--gold); filter: drop-shadow(var(--gold-glow)); }
+    .nav-link, .navbar-brand { color: #fff !important; font-weight: 500;}
+    .nav-link.active { color: var(--gold) !important;}
+    .nav-glass { background: var(--glass-blur); box-shadow: 0 0 8px #0d1b4c88; }
+    .section { padding: 80px 0; }
+    .glass-card { background: var(--glass-blur); border: 1.5px solid var(--gold); border-radius: 1.25rem; box-shadow: 0 6px 32px 0 rgba(212,175,55,0.09); }
+    .service-card { transition: transform 0.3s cubic-bezier(.13,.39,.24,1.16), box-shadow 0.2s; perspective: 900px; }
+    .service-card:hover { transform: scale(1.03) rotateY(6deg) skewY(1.7deg) translateY(-7px); box-shadow: 0 0 36px 4px #d4af3780; z-index: 2;}
+    .service-card .btn-gold { margin-top: 12px;}
+    .feature-box { transition: box-shadow 0.22s, transform 0.22s;}
+    .feature-box:hover { box-shadow: var(--gold-glow); transform: translateY(-5px) scale(1.02);}
+    .feature-icon { font-size: 2.2rem; color: var(--gold);}
+    .gallery-img { border-radius: 1.2rem; object-fit: cover; transition: box-shadow 0.18s;}
+    .gallery-img:hover { box-shadow: 0 0 18px #d4af3785;}
+    /* Glassmorphism Modal */
+    .modal-backdrop.show { background: rgba(7, 15, 43, 0.89) !important;}
+    .modal-content { background: var(--glass-gradient) !important; border-radius: 1.5rem; border: 1.5px solid var(--gold); box-shadow: 0 8px 48px 0 #d4af3745;}
+    /* Gallery Lightbox */
+    .lightbox-overlay {
+      position: fixed; top: 0; left: 0; right:0; bottom:0; background: rgba(13, 27, 76, 0.85); backdrop-filter: blur(5px); z-index: 9999; display: flex; align-items: center; justify-content: center;
+    }
+    .lightbox-img { max-width:90vw; max-height:85vh; border-radius:1.1rem; box-shadow: 0 0 28px #d4af3766; }
+    .lightbox-close { position: absolute; top: 32px; right: 42px; color: var(--gold); font-size: 2rem; cursor: pointer;}
+    /* Mobile Bottom Nav */
+    @media(max-width: 767px){
+      .bottom-nav-glass {
+        position: fixed;
+        bottom: 12px;
+        left: 10px;
+        right: 10px;
+        background: var(--glass-gradient);
+        backdrop-filter: blur(10px);
+        height: 60px;
+        border-radius: 1.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 9970;
+        box-shadow: 0 3px 16px #0d1b4c63;
+      }
+      .bottom-nav-glass a { color: #fff; font-size: 1.4rem;}
+      .floating-btns {
+        position: fixed;
+        z-index:9980;
+        bottom: 85px;
+        right: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .floating-btn {
+        display: flex; align-items: center; justify-content: center;
+        background: var(--gold);
+        color: var(--royal-blue);
+        border-radius: 50%;
+        box-shadow: var(--gold-glow);
+        font-size: 1.5rem;
+        width: 54px;height:54px;
+        transition: all 0.18s;
+      }
+      .floating-btn:hover { background: #fffbe8; }
+    }
+    /* Loader */
+    #spa-loader {
+      display: flex; justify-content:center; align-items:center;
+      height:100vh;width:100vw;position:fixed;top:0;left:0;z-index:20000;
+      background: var(--royal-blue); transition: opacity 1.22s;
+    }
+    #spa-loader span {
+      font-size:2.7rem;
+      color:var(--gold);
+      font-weight: bold;
+      background: linear-gradient(98deg, #d4af37 30%, #fffbe7 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(var(--gold-glow));
+      letter-spacing: 1.9px;
+    }
+    /* Hero Smoke Animation Placeholder */
+    .hero-smoke { position: absolute; left:0;top:0;width:100%;height:100%; pointer-events: none; z-index:0;}
+    /* Melody trigger button (hidden, for a11y) */
+    #melody-trigger-btn { display: none; }
+    /* FAQ */
+    .accordion-button { background: var(--glass-gradient); color: #fff;}
+    .accordion-item { background: none; border: none;}
+    .accordion-button:not(.collapsed) { color: var(--gold);}
+    /* Sticky header */
+    .sticky-top { background: var(--glass-blur); }
+    /* Misc */
+    .form-label { color: var(--gold);}
+    ::selection { background: var(--gold); color: var(--royal-blue);}
+    .whatsapp-float-link { position:fixed; z-index:9001; bottom:149px; right:22px; background: #25D366; color:#fff; border-radius:50%; width:54px; height:54px;display:flex; align-items:center;justify-content:center; font-size:2rem;box-shadow:0 0 12px #25D36685; }
+    .call-float-link { position:fixed; z-index:9000; bottom:215px; right:22px; background: #0d1b4c; color:#d4af37; border-radius:50%; width:54px; height:54px;display:flex; align-items:center;justify-content:center; font-size:1.8rem;box-shadow:0 0 12px #d4af3785; }
+  </style>
+</head>
+<body>
+
+<!-- Loader (Anime.js powered) -->
+<div id="spa-loader">
+  <span id="loader-text">My Friends Salon <span class="gold-text">And Spa</span></span>
+</div>
+
+<!-- Sticky Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top nav-glass py-2" id="spa-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="#"><i class="fa-solid fa-spa icon-gold"></i> My Friends <span class="gold-text">Salon And Spa</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto me-1">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#whyus">Why Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="section position-relative" id="home">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <!-- Animated Illustration Left -->
+      <div class="col-lg-6 position-relative" style="min-height:340px;">
+        <!-- Placeholder for Smoke/Gold Dust Animation -->
+        <canvas id="hero-smoke" class="hero-smoke"></canvas>
+        <div class="glass p-4" style="max-width:370px;z-index:3;position:relative;" data-aos="fade-right">
+          <h1 class="display-4 fw-bold">Welcome to <span class="gold-text">My Friends</span><br>Salon And Spa</h1>
+          <p class="lead mt-2 mb-3">Experience the pinnacle of <span class="gold-text">luxury and rejuvenation</span> in Chennai's premier spa sanctuary. Relax, revitalize, and glow in our elegant, international-standard oasis.</p>
+          <div class="d-flex flex-wrap gap-3 mt-2">
+            <button class="btn btn-gold px-4" onclick="openBooking()">Book Now</button>
+            <a class="btn btn-gold px-4" href="tel:07299012666">Call Now</a>
+            <a class="btn btn-success px-4" href="https://wa.me/917299012666" target="_blank">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <!-- Right Content -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="glass p-4 mt-4 mt-lg-0">
+          <h2 class="gold-text mb-3">Royal Indulgence Awaits</h2>
+          <p>Unwind in our tranquil, aroma-filled sanctuary where <b>expert therapists</b> and bespoke treatments await.<br>
+          Let serenity surround you with premium services, luxury rituals, and world-class hospitality.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Gallery Section -->
+<section class="section" id="gallery">
+  <div class="container">
+    <h2 class="text-center gold-text mb-5" data-aos="fade-up">Gallery</h2>
+    <div class="row g-3">
+      <!-- Replace the img src and alt text as needed. Use compressed, optimized images. -->
+      <div class="col-6 col-md-3" data-aos="fade-in">
+        <img src="./1.jpg" alt="Luxury spa lobby with gold decor" class="gallery-img w-100" onclick="openLightbox(this.src)" loading="lazy">
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-in" data-aos-delay="40">
+        <img src="./2.jpg" alt="Tranquil therapy room" class="gallery-img w-100" onclick="openLightbox(this.src)" loading="lazy">
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-in" data-aos-delay="80">
+        <img src="./3.jpg" alt="Premium massage treatment" class="gallery-img w-100" onclick="openLightbox(this.src)" loading="lazy">
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-in" data-aos-delay="120">
+        <img src="./4.jpg" alt="Couple’s spa session" class="gallery-img w-100" onclick="openLightbox(this.src)" loading="lazy">
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-in" data-aos-delay="160">
+        <img src="./5.jpg" alt="Therapist at work" class="gallery-img w-100" onclick="openLightbox(this.src)" loading="lazy">
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-in" data-aos-delay="200">
+        <img src="./6.jpg" alt="Pedicure area" class="gallery-img w-100" onclick="openLightbox(this.src)" loading="lazy">
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-in" data-aos-delay="240">
+        <img src="./7.jpg" alt="Body wrap treatment room" class="gallery-img w-100" onclick="openLightbox(this.src)" loading="lazy">
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-in" data-aos-delay="280">
+        <img src="./8.jpg" alt="Japanese soaking tub" class="gallery-img w-100" onclick="openLightbox(this.src)" loading="lazy">
+      </div>
+      <!-- More images as needed -->
+    </div>
+  </div>
+</section>
+<div id="lightbox" style="display:none"></div>
+
+<!-- About Section -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="row justify-content-center mb-5" data-aos="fade-up">
+      <div class="col-lg-8">
+        <div class="glass p-4">
+          <h2 class="gold-text mb-3">About Us</h2>
+          <p>
+            At <b>My Friends Salon And Spa</b>, we redefine the art of relaxation. Located in the heart of Chennai, our spa brings together centuries-old wellness traditions with cutting-edge technology. Each guest is welcomed into an oasis of elegance—where <span class="gold-text">personalized therapies</span>, <span class="gold-text">bespoke pampering</span>, and a calming atmosphere converge to create the ultimate luxury experience.<br>
+            Our expert therapists combine authentic techniques with premium products to deliver unforgettable massages, facials, and body treatments. Whether seeking relief, radiance, or relaxation, every moment at our spa is designed to rejuvenate both body and mind.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Us Section -->
+<section class="section" id="whyus">
+  <div class="container">
+    <h2 class="text-center gold-text mb-4" data-aos="fade-up">Why Choose Us?</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="glass feature-box text-center p-4 h-100">
+          <div class="feature-icon mb-3"><i class="fa-solid fa-crown"></i></div>
+          <h5 class="gold-text">Luxury Ambience</h5>
+          <p>Experience a seamless blend of sophistication, elegance, and peace in every detail of our sanctuary.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
+        <div class="glass feature-box text-center p-4 h-100">
+          <div class="feature-icon mb-3"><i class="fa-solid fa-spa"></i></div>
+          <h5 class="gold-text">Expert Therapists</h5>
+          <p>Skilled professionals trained in ancient and modern techniques, committed to your well-being.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="glass feature-box text-center p-4 h-100">
+          <div class="feature-icon mb-3"><i class="fa-solid fa-bath"></i></div>
+          <h5 class="gold-text">Premium Products</h5>
+          <p>We use only high-quality, skin-safe, and luxurious products for all our services.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="glass feature-box text-center p-4 h-100">
+          <div class="feature-icon mb-3"><i class="fa-solid fa-seedling"></i></div>
+          <h5 class="gold-text">Hygienic & Safe</h5>
+          <p>Immaculate hygiene standards, sanitized environment & touch-free experiences.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="glass feature-box text-center p-4 h-100">
+          <div class="feature-icon mb-3"><i class="fa-solid fa-hand-holding-heart"></i></div>
+          <h5 class="gold-text">Personalized Care</h5>
+          <p>Tailored therapies and attentive staff ensuring every guest feels exclusive.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="250">
+        <div class="glass feature-box text-center p-4 h-100">
+          <div class="feature-icon mb-3"><i class="fa-solid fa-leaf"></i></div>
+          <h5 class="gold-text">Eco-Conscious</h5>
+          <p>Committed to sustainability, our practices and products are eco-friendly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="section" id="services">
+  <div class="container">
+    <h2 class="text-center gold-text mb-5" data-aos="fade-up">Our Services & Pricing</h2>
+    <div class="row g-4" id="service-list">
+      <!-- Massage Treatments Glass Cards -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="glass-card service-card p-4 h-100">
+          <h5 class="gold-text mb-2">Deep Tissue Massage</h5>
+          <ul class="mb-2">
+            <li>60m <span class="gold-text">₹2500</span></li>
+            <li>90m <span class="gold-text">₹3500</span></li>
+            <li>120m <span class="gold-text">₹4500</span></li>
+          </ul>
+          <button class="btn btn-gold w-100" onclick="openBooking('Deep Tissue Massage')">Book Now</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
+        <div class="glass-card service-card p-4 h-100">
+          <h5 class="gold-text mb-2">Thai Yoga Massage</h5>
+          <ul class="mb-2">
+            <li>60m <span class="gold-text">₹3000</span></li>
+            <li>90m <span class="gold-text">₹4000</span></li>
+            <li>120m <span class="gold-text">₹5000</span></li>
+          </ul>
+          <button class="btn btn-gold w-100" onclick="openBooking('Thai Yoga Massage')">Book Now</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="glass-card service-card p-4 h-100">
+          <h5 class="gold-text mb-2">Balinese Massage</h5>
+          <ul class="mb-2">
+            <li>60m <span class="gold-text">₹2200</span></li>
+            <li>90m <span class="gold-text">₹3200</span></li>
+            <li>120m <span class="gold-text">₹4200</span></li>
+          </ul>
+          <button class="btn btn-gold w-100" onclick="openBooking('Balinese Massage')">Book Now</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="glass-card service-card p-4 h-100">
+          <h5 class="gold-text mb-2">Lubys Signature Massage</h5>
+          <ul class="mb-2">
+            <li>60m <span class="gold-text">₹3000</span></li>
+            <li>90m <span class="gold-text">₹4000</span></li>
+            <li>120m <span class="gold-text">₹5000</span></li>
+          </ul>
+          <button class="btn btn-gold w-100" onclick="openBooking('Lubys Signature Massage')">Book Now</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="glass-card service-card p-4 h-100">
+          <h5 class="gold-text mb-2">Couple Massage</h5>
+          <ul class="mb-2">
+            <li>60m <span class="gold-text">₹5000</span></li>
+            <li>90m <span class="gold-text">₹6500</span></li>
+            <li>120m <span class="gold-text">₹8000</span></li>
+          </ul>
+          <button class="btn btn-gold w-100" onclick="openBooking('Couple Massage')">Book Now</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+        <div class="glass-card service-card p-4 h-100">
+          <h5 class="gold-text mb-2">Hot Stone Massage</h5>
+          <ul class="mb-2">
+            <li>60m <span class="gold-text">₹3000</span></li>
+            <li>90m <span class="gold-text">₹4000</span></li>
+            <li>120m <span class="gold-text">₹5000</span></li>
+          </ul>
+          <button class="btn btn-gold w-100" onclick="openBooking('Hot Stone Massage')">Book Now</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="glass-card service-card p-4 h-100">
+          <h5 class="gold-text mb-2">Head, Neck & Shoulder</h5>
+          <ul class="mb-2"><li>30m <span class="gold-text">₹1500</span></li></ul>
+          <button class="btn btn-gold w-100" onclick="openBooking('Head, Neck & Shoulder')">Book Now</button>
+        </div>
+      </div>
+      <!-- Other Spa Services -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
+        <div class="glass-card service-card p-4 h-100">
+          <h5 class="gold-text mb-2">Ayurvedic Massage</h5>
+          <ul class="mb-2"><li>60m <span class="gold-text">₹2500</span></li></ul>
+          <button class="btn btn-gold w-100" onclick="openBooking('Ayurvedic Massage')">Book Now</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="glass-card service-card p-4 h-100">
+          <h5 class="gold-text mb-2">Foot Massage</h5>
+          <ul class="mb-2"><li>30m <span class="gold-text">₹800</span></li></ul>
+          <button class="btn btn-gold w-100" onclick="openBooking('Foot Massage')">Book Now</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="450">
+        <div class="glass-card service-card p-4 h-100">
+          <h5 class="gold-text mb-2">Head Massage</h5>
+          <ul class="mb-2"><li>30m <span class="gold-text">₹800</span></li></ul>
+          <button class="btn btn-gold w-100" onclick="openBooking('Head Massage')">Book Now</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="glass-card service-card p-4 h-100">
+          <h5 class="gold-text mb-2">Body Scrub</h5>
+          <ul class="mb-2"><li>45m <span class="gold-text">₹3000</span></li></ul>
+          <button class="btn btn-gold w-100" onclick="openBooking('Body Scrub')">Book Now</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="550">
+        <div class="glass-card service-card p-4 h-100">
+          <h5 class="gold-text mb-2">Body Wrap</h5>
+          <ul class="mb-2"><li>45m <span class="gold-text">₹3000</span></li></ul>
+          <button class="btn btn-gold w-100" onclick="openBooking('Body Wrap')">Book Now</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="glass-card service-card p-4 h-100">
+          <h5 class="gold-text mb-2">Pedicure</h5>
+          <ul class="mb-2"><li>45m <span class="gold-text">₹1000</span></li></ul>
+          <button class="btn btn-gold w-100" onclick="openBooking('Pedicure')">Book Now</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="650">
+        <div class="glass-card service-card p-4 h-100">
+          <h5 class="gold-text mb-2">Manicure</h5>
+          <ul class="mb-2"><li>45m <span class="gold-text">₹800</span></li></ul>
+          <button class="btn btn-gold w-100" onclick="openBooking('Manicure')">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- FAQ Section -->
+<section class="section" id="faq">
+  <div class="container">
+    <h2 class="text-center gold-text mb-5" data-aos="fade-up">Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item glass mb-3" data-aos="fade-up">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne">
+            Do you accept walk-ins or is booking recommended?
+          </button>
+        </h2>
+        <div id="faqOne" class="accordion-collapse collapse show">
+          <div class="accordion-body">Booking is recommended for preferred time slots, but walk-ins are also welcome subject to availability.</div>
+        </div>
+      </div>
+      <div class="accordion-item glass mb-3" data-aos="fade-up" data-aos-delay="55">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo">
+            What should I bring for my spa appointment?
+          </button>
+        </h2>
+        <div id="faqTwo" class="accordion-collapse collapse">
+          <div class="accordion-body">All essentials are provided. Just bring yourself and relax!</div>
+        </div>
+      </div>
+      <div class="accordion-item glass mb-3" data-aos="fade-up" data-aos-delay="110">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree">
+            Are couple massages available?
+          </button>
+        </h2>
+        <div id="faqThree" class="accordion-collapse collapse">
+          <div class="accordion-body">Yes, our couple massage suite offers the perfect environment for shared relaxation.</div>
+        </div>
+      </div>
+      <div class="accordion-item glass mb-3" data-aos="fade-up" data-aos-delay="165">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour">
+            Which payment methods are accepted?
+          </button>
+        </h2>
+        <div id="faqFour" class="accordion-collapse collapse">
+          <div class="accordion-body">We accept cash, all major credit/debit cards, and UPI payments.</div>
+        </div>
+      </div>
+      <div class="accordion-item glass mb-3" data-aos="fade-up" data-aos-delay="220">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFive">
+            Is parking available?
+          </button>
+        </h2>
+        <div id="faqFive" class="accordion-collapse collapse">
+          <div class="accordion-body">Ample off-street parking is available for all guests.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section" id="contact">
+  <div class="container">
+    <h2 class="text-center gold-text mb-5" data-aos="fade-up">Contact Us</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="glass p-4">
+          <h4 class="mb-2">My Friends Salon And Spa</h4>
+          <p class="mb-1"><i class="fa-solid fa-location-dot me-2"></i>Dev Apartments, 5, Prithvi Ave 1st St, Demonte Colony, Abiramapuram, Chennai – 600018</p>
+          <p class="mb-1"><i class="fa-solid fa-phone me-2"></i><a href="tel:07299012666" class="gold-text">072990 12666</a></p>
+          <p class="mb-1"><i class="fab fa-whatsapp me-2"></i><a href="https://wa.me/917299012666" class="gold-text">WhatsApp Us</a></p>
+          <p class="mb-1"><i class="fa-solid fa-envelope me-2"></i><a href="mailto:info@MyFriendsSalonAndSpa.com" class="gold-text">info@MyFriendsSalonAndSpa.com</a></p>
+          <p class="mb-1"><i class="fa-solid fa-clock me-2"></i>Open: 10:00 AM – 9:00 PM (All days)</p>
+          <div class="mt-3 mb-1" style="border-radius:14px; overflow:hidden">
+            <iframe src="https://www.google.com/maps?q=My+Friends+Salon+And+Spa,+Demonte+Colony,+Chennai&output=embed" style="border:0;width:100%;height:220px;" loading="lazy" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Booking Modal (Glassmorphism) -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true" style="z-index: 99999999999;">
+  <div class="modal-dialog">
+    <form class="modal-content" id="bookingForm">
+      <div class="modal-header border-0">
+        <h5 class="modal-title gold-text" id="bookingModalLabel"><i class="fa-solid fa-calendar-check gold-text"></i> Book Your Session</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control glass" name="fullname" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Mobile Number</label>
+          <input type="tel" class="form-control glass" name="mobile" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Date</label>
+          <input type="date" class="form-control glass" name="date" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Time</label>
+          <input type="time" class="form-control glass" name="time" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Service</label>
+          <select class="form-select glass" name="service" required>
+            <option class="bg-dark" value="" disabled selected>Select Service</option>
+            <option class="bg-dark">Deep Tissue Massage</option>
+            <option class="bg-dark">Thai Yoga Massage</option>
+            <option class="bg-dark">Balinese Massage</option>
+            <option class="bg-dark">Lubys Signature Massage</option>
+            <option class="bg-dark">Couple Massage</option>
+            <option class="bg-dark">Hot Stone Massage</option>
+            <option class="bg-dark">Head, Neck & Shoulder</option>
+            <option class="bg-dark">Ayurvedic Massage</option>
+            <option class="bg-dark">Foot Massage</option>
+            <option class="bg-dark">Head Massage</option>
+            <option class="bg-dark">Body Scrub</option>
+            <option class="bg-dark">Body Wrap</option>
+            <option class="bg-dark">Pedicure</option>
+            <option class="bg-dark">Manicure</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer border-0 flex-wrap gap-2 justify-content-between">
+        <button type="button" class="btn btn-success" onclick="submitBookingViaWhatsApp()">Submit via WhatsApp</button>
+        <button type="button" class="btn btn-gold" onclick="submitBookingViaEmail()">Submit via Email</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Mobile Bottom App Navbar -->
+<nav class="bottom-nav-glass d-md-none d-flex">
+  <a href="#home" class="nav-link active"><i class="fa-solid fa-home"></i></a>
+  <a href="#services" class="nav-link"><i class="fa-solid fa-list"></i></a>
+  <a href="#gallery" class="nav-link"><i class="fa-solid fa-image"></i></a>
+  <a href="#contact" class="nav-link"><i class="fa-solid fa-phone"></i></a>
+</nav>
+<!-- Floating Buttons (Mobile) -->
+<div class="d-md-none floating-btns">
+  <a class="floating-btn" href="javascript:void(0)" onclick="openBooking()"><i class="fa-solid fa-calendar-plus"></i></a>
+  <a class="floating-btn" href="tel:07299012666"><i class="fa-solid fa-phone"></i></a>
+  <a class="floating-btn" href="https://wa.me/917299012666"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<!-- Global Floating Call & WhatsApp (Desktop) -->
+<a href="https://wa.me/917299012666" target="_blank" class="whatsapp-float-link d-none d-md-flex"><i class="fab fa-whatsapp"></i></a>
+<a href="tel:07299012666" class="call-float-link d-none d-md-flex"><i class="fa-solid fa-phone"></i></a>
+
+<!-- Footer -->
+<footer class="section pb-3 pt-4 text-center glass" style="margin-top:60px;background:var(--glass-blur); margin-bottom: 60px;">
+  <div class="container">
+    <div class="mb-2">
+      <a href="#home" class="me-3">Home</a>
+      <a href="#about" class="me-3">About</a>
+      <a href="#whyus" class="me-3">Why Us</a>
+      <a href="#services" class="me-3">Services</a>
+      <a href="#gallery" class="me-3">Gallery</a>
+      <a href="#faq" class="me-3">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="mb-2">
+      <a href="https://www.facebook.com/" class="me-3"><i class="fab fa-facebook icon-gold"></i></a>
+      <a href="https://instagram.com/" class="me-3"><i class="fab fa-instagram icon-gold"></i></a>
+      <a href="https://wa.me/917299012666"><i class="fab fa-whatsapp icon-gold"></i></a>
+    </div>
+    <div class="mt-3" style="font-size:1.01rem">
+      Developed by <a href="https://softwaredevelopmentandgraphicdesign.tech/" class="gold-text text-decoration-underline" target="_blank">SDGD</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Melody Trigger Button (Hidden for a11y, JS will use) -->
+<button id="melody-trigger-btn"></button>
+
+<!-- JS & Animation Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  // Loader Animation
+  window.addEventListener('DOMContentLoaded', () => {
+    anime({
+      targets: '#loader-text',
+      opacity: [0,1],
+      scale: [0.86,1],
+      duration: 1100,
+      easing: 'easeOutExpo',
+      direction: 'alternate',
+      complete: () => {
+        setTimeout(() => {
+          anime({
+            targets: '#spa-loader',
+            opacity: [1, 0],
+            duration: 1200,
+            easing: 'easeInOutQuad',
+            complete: () => document.getElementById('spa-loader').style.display = 'none'
+          });
+        }, 1350);
+      }
+    });
+    // Soft smoke pseudo-animation
+    setTimeout(() => {
+      const ctx = document.getElementById('hero-smoke').getContext('2d');
+      // Optional: Use a library or custom code to draw animated smoke/gold particles here
+      // Placeholder: simple ellipse animated as 'smoke'
+      anime({
+        targets: {},
+        loop: true,
+        update: function() {
+          ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
+          ctx.save();
+          ctx.globalAlpha = 0.19;
+          ctx.beginPath();
+          ctx.ellipse(ctx.canvas.width/2, ctx.canvas.height/2, 170, 54, 0, 0, Math.PI * 2);
+          ctx.fillStyle = "gold";
+          ctx.fill();
+          ctx.restore();
+        }
+      });
+    }, 1000)
+  });
+  // AOS Init
+  AOS.init({ duration: 900, once: true });
+  // Sticky Nav highlight
+  document.addEventListener('scroll', () => {
+    let scrollPos = window.scrollY;
+    document.querySelectorAll('nav .nav-link').forEach(link => {
+      let section = document.querySelector(link.getAttribute('href'));
+      if(!section) return;
+      if (section.offsetTop - 90 <= scrollPos && (section.offsetTop + section.offsetHeight) > scrollPos) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  });
+  // Lightbox Gallery
+  function openLightbox(src) {
+    const lb = document.getElementById('lightbox');
+    lb.innerHTML = `<div class='lightbox-overlay' onclick='closeLightbox()'>
+      <img src='${src}' alt='Spa gallery image' class='lightbox-img'>
+      <span class='lightbox-close' onclick='closeLightbox(event)'><i class="fa-solid fa-xmark"></i></span>
+     </div>`;
+    lb.style.display = 'block';
+  }
+  function closeLightbox(e){if(e){e.stopPropagation();} document.getElementById('lightbox').style.display = 'none';}
+  // Booking Modal
+  function openBooking(service) {
+    if(service){
+      document.querySelector('#bookingModal select[name=service]').value = service;
+    }
+    new bootstrap.Modal(document.getElementById('bookingModal'), {backdrop:'static'}).show();
+  }
+  // Booking - WhatsApp
+  function submitBookingViaWhatsApp(){
+    let f = document.getElementById('bookingForm');
+    let name = f.fullname.value.trim();
+    let mobile = f.mobile.value.trim();
+    let date = f.date.value;
+    let time = f.time.value;
+    let service = f.service.value;
+    if(!name||!mobile||!date||!time||!service){alert("Please fill all fields.");return;}
+    let msg = `*My Friends Salon And Spa — Booking Request*\n\nName: ${name}\nMobile: ${mobile}\nDate: ${date}\nTime: ${time}\nService: ${service}`;
+    let url = `https://wa.me/917299012666?text=${encodeURIComponent(msg)}`;
+    window.open(url, "_blank");
+  }
+  // Booking - Email
+  function submitBookingViaEmail(){
+    let f = document.getElementById('bookingForm');
+    let name = f.fullname.value.trim();
+    let mobile = f.mobile.value.trim();
+    let date = f.date.value;
+    let time = f.time.value;
+    let service = f.service.value;
+    if(!name||!mobile||!date||!time||!service){alert("Please fill all fields.");return;}
+    let subject = `Booking Request - My Friends Salon And Spa`;
+    let body = `Name: ${name}%0AMobile: ${mobile}%0ADate: ${date}%0ATime: ${time}%0AService: ${service}`;
+    window.open(`mailto:info@MyFriendsSalonAndSpa.com?subject=${subject}&body=${body}`);
+  }
+  // Mobile App-like transitions (Smooth Scroll)
+  document.querySelectorAll('.nav-link').forEach(link=>{
+    link.onclick = function(e){
+      e.preventDefault();
+      let target = document.querySelector(this.getAttribute('href'));
+      if(target){
+        window.scroll({top:target.offsetTop-71, behavior:'smooth'});
+      }
+    }
+  });
+  // Mobile Floating Appbar Active State
+  document.querySelectorAll('.bottom-nav-glass .nav-link').forEach(link=>{
+    link.onclick = function(e){
+      document.querySelectorAll('.bottom-nav-glass .nav-link').forEach(l=>l.classList.remove('active'));
+      this.classList.add('active');
+    }
+  });
+  // Background Melody — only after scroll or click
+  let melodyPlayed = false;
+  function playMelody(){
+    if(melodyPlayed) return;
+    melodyPlayed = true;
+    // Optionally add your melody file below, uncomment to use:
+    // let audio = new Audio('melody.mp3'); audio.volume=0.17; audio.play();
+  }
+  window.addEventListener('scroll', playMelody);
+  document.body.addEventListener('click', playMelody);
+</script>
+</body>
+</html>
