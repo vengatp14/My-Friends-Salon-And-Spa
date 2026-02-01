@@ -232,6 +232,7 @@ a {
         <li class="nav-item"><a class="nav-link" href="#whyus">Why Us</a></li>
         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
         <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
@@ -510,6 +511,25 @@ a {
 
 
 
+<!-- Blog Section -->
+<section class="section" id="blog">
+  <div class="container">
+    <h2 class="text-center gold-text mb-5" data-aos="fade-up">Wellness Blog</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-6 col-md-8" data-aos="fade-up">
+        <div class="glass-card service-card p-4 h-100 cursor-pointer" onclick="openBlogModal('Ultimate Body Relaxation')" style="cursor: pointer;">
+          <h5 class="gold-text mb-3">Ultimate Body Relaxation</h5>
+          <p class="mb-3">Discover the art of complete body relaxation through our premium massage therapies and spa treatments designed to rejuvenate your mind, body, and soul.</p>
+          <div class="d-flex align-items-center gap-2">
+            <span class="btn btn-gold px-3">Read More</span>
+            <i class="fa-solid fa-arrow-right gold-text"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ Section -->
 <section class="section" id="faq">
   <div class="container">
@@ -645,6 +665,21 @@ a {
   </div>
 </div>
 
+<!-- Blog Modal (Glassmorphism) -->
+<div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true" style="z-index: 99999999999;">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title gold-text" id="blogModalLabel"><i class="fa-solid fa-book gold-text"></i> <span id="blogTitle"></span></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="blogContent" style="max-height: 500px; overflow-y: auto;">
+        <!-- Content will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Mobile Bottom App Navbar -->
 <nav class="bottom-nav-glass d-md-none d-flex">
   <a href="#home" class="nav-link active"><i class="fa-solid fa-home"></i></a>
@@ -672,6 +707,7 @@ a {
       <a href="#whyus" class="me-3">Why Us</a>
       <a href="#services" class="me-3">Services</a>
       <a href="#gallery" class="me-3">Gallery</a>
+      <a href="#blog" class="me-3">Blog</a>
       <a href="#faq" class="me-3">FAQ</a>
       <a href="#contact">Contact</a>
     </div>
@@ -812,6 +848,59 @@ a {
       this.classList.add('active');
     }
   });
+  // Blog Modal Function
+  function openBlogModal(title) {
+    document.getElementById('blogTitle').textContent = title;
+    let content = '';
+    if(title === 'Ultimate Body Relaxation') {
+      content = `
+        <h4 class="gold-text mb-3">Ultimate Body Relaxation: Your Complete Wellness Guide</h4>
+        <p><strong>Published:</strong> February 1, 2026 | <strong>Category:</strong> Wellness & Relaxation</p>
+        <hr class="gold-text" style="opacity: 0.3;">
+        
+        <h5 class="gold-text mt-4">What is Ultimate Body Relaxation?</h5>
+        <p>Ultimate Body Relaxation is a holistic approach to wellness that combines ancient therapeutic techniques with modern spa treatments. It's designed to release tension from every muscle group, calm the nervous system, and promote complete physical and mental rejuvenation.</p>
+        
+        <h5 class="gold-text mt-4">The Science Behind Relaxation</h5>
+        <p>When your body is in a relaxed state, it activates the parasympathetic nervous system—your body's natural healing mode. This reduces cortisol levels, lowers blood pressure, improves sleep quality, and enhances overall immunity. Professional massage therapy and spa treatments are proven to accelerate this process.</p>
+        
+        <h5 class="gold-text mt-4">Our Ultimate Body Relaxation Services Include:</h5>
+        <ul class="text-white">
+          <li><strong>Deep Tissue Massage:</strong> Targets deep muscle knots and chronic tension</li>
+          <li><strong>Hot Stone Massage:</strong> Uses heated stones to ease muscle tension and improve circulation</li>
+          <li><strong>Thai Yoga Massage:</strong> Combines stretching with acupressure for full-body alignment</li>
+          <li><strong>Body Wrap & Scrub:</strong> Exfoliates and detoxifies your skin</li>
+          <li><strong>Ayurvedic Massage:</strong> Ancient Indian wellness therapy for balance and harmony</li>
+        </ul>
+        
+        <h5 class="gold-text mt-4">Benefits You'll Experience</h5>
+        <ul class="text-white">
+          <li>Relief from muscle tension and chronic pain</li>
+          <li>Improved blood circulation and lymphatic drainage</li>
+          <li>Better sleep quality and reduced insomnia</li>
+          <li>Lower stress and anxiety levels</li>
+          <li>Enhanced skin health and natural glow</li>
+          <li>Improved flexibility and range of motion</li>
+          <li>Boosted immune system function</li>
+        </ul>
+        
+        <h5 class="gold-text mt-4">Why Choose My Friends Salon And Spa?</h5>
+        <p>At <strong>My Friends Salon And Spa</strong> in Chennai, we provide an internationally-standard environment with expert therapists trained in multiple relaxation techniques. Our luxury facilities, premium products, and personalized approach ensure that every guest experiences true ultimate body relaxation.</p>
+        
+        <h5 class="gold-text mt-4">How Often Should You Get a Relaxation Treatment?</h5>
+        <p>For optimal benefits, we recommend treatments every 2-4 weeks. Regular sessions help maintain muscle flexibility, manage stress continuously, and prevent the accumulation of tension.</p>
+        
+        <h5 class="gold-text mt-4">Getting Started</h5>
+        <p>Ready to experience ultimate body relaxation? Book your session today! Our team will help you choose the perfect treatment based on your needs and preferences. Whether you're looking for a 60-minute quick escape or a 120-minute full indulgence, we have the perfect package for you.</p>
+        
+        <div class="text-center mt-4">
+          <button class="btn btn-gold px-4" onclick="openBooking('Deep Tissue Massage'); bootstrap.Modal.getInstance(document.getElementById('blogModal')).hide();">Book Your Treatment Now</button>
+        </div>
+      `;
+    }
+    document.getElementById('blogContent').innerHTML = content;
+    new bootstrap.Modal(document.getElementById('blogModal'), {backdrop:'static'}).show();
+  }
   // Background Melody — only after scroll or click
   let melodyPlayed = false;
   function playMelody(){
