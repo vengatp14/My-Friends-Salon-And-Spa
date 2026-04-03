@@ -526,6 +526,16 @@ a {
           </div>
         </div>
       </div>
+      <div class="col-lg-6 col-md-8" data-aos="fade-up" data-aos-delay="100">
+        <div class="glass-card service-card p-4 h-100 cursor-pointer" onclick="openBlogModal('Thai Massage')" style="cursor: pointer;">
+          <h5 class="gold-text mb-3">Thai Massage: Ancient Healing Techniques</h5>
+          <p class="mb-3">Experience the traditional Thai massage, a therapeutic practice that combines yoga-like stretches, acupressure, and energy work for deep relaxation and improved flexibility.</p>
+          <div class="d-flex align-items-center gap-2">
+            <span class="btn btn-gold px-3">Read More</span>
+            <i class="fa-solid fa-arrow-right gold-text"></i>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -895,6 +905,62 @@ a {
         
         <div class="text-center mt-4">
           <button class="btn btn-gold px-4" onclick="openBooking('Deep Tissue Massage'); bootstrap.Modal.getInstance(document.getElementById('blogModal')).hide();">Book Your Treatment Now</button>
+        </div>
+      `;
+    } else if(title === 'Thai Massage') {
+      content = `
+        <h4 class="gold-text mb-3">Thai Massage: Ancient Healing Techniques for Modern Wellness</h4>
+        <p><strong>Published:</strong> April 3, 2026 | <strong>Category:</strong> Massage Therapy</p>
+        <hr class="gold-text" style="opacity: 0.3;">
+        
+        <h5 class="gold-text mt-4">What is Thai Massage?</h5>
+        <p>Thai massage, also known as Thai yoga massage, is an ancient healing practice that originated in Thailand over 2,500 years ago. Unlike traditional Western massages that focus on kneading muscles, Thai massage incorporates yoga-like stretches, acupressure, and energy work to release tension and restore balance to the body's energy lines.</p>
+        
+        <h5 class="gold-text mt-4">The Origins and Philosophy</h5>
+        <p>Rooted in Buddhist principles and Ayurvedic medicine, Thai massage views the body as a network of energy pathways called "Sen lines." The practice aims to clear blockages in these lines, allowing life force (Prana) to flow freely. This holistic approach treats not just physical symptoms but also emotional and spiritual well-being.</p>
+        
+        <h5 class="gold-text mt-4">How Thai Massage Works</h5>
+        <p>During a Thai massage session, our skilled therapists use their hands, elbows, knees, and feet to apply pressure along the body's energy lines. The treatment includes:</p>
+        <ul class="text-white">
+          <li><strong>Acupressure:</strong> Targeted pressure on specific points to release tension</li>
+          <li><strong>Passive Yoga Stretches:</strong> Gentle stretching to improve flexibility and joint mobility</li>
+          <li><strong>Energy Balancing:</strong> Techniques to harmonize the body's internal energy</li>
+          <li><strong>Breathing Techniques:</strong> Guided breathing to enhance relaxation</li>
+        </ul>
+        
+        <h5 class="gold-text mt-4">Benefits of Thai Massage</h5>
+        <ul class="text-white">
+          <li>Improved flexibility and range of motion</li>
+          <li>Relief from muscle tension and chronic pain</li>
+          <li>Enhanced blood circulation and lymphatic drainage</li>
+          <li>Reduced stress and anxiety levels</li>
+          <li>Better posture and body alignment</li>
+          <li>Increased energy and mental clarity</li>
+          <li>Improved sleep quality</li>
+          <li>Boosted immune system function</li>
+        </ul>
+        
+        <h5 class="gold-text mt-4">Our Thai Massage Experience</h5>
+        <p>At <strong>My Friends Salon And Spa</strong>, our certified Thai massage therapists bring authentic techniques to Chennai. We offer sessions in 60, 90, and 120-minute durations, allowing you to choose the perfect length for your needs. Our serene environment, infused with calming aromas and soft music, enhances the traditional experience.</p>
+        
+        <h5 class="gold-text mt-4">Who Can Benefit from Thai Massage?</h5>
+        <p>Thai massage is suitable for most people, from athletes seeking improved performance to office workers dealing with desk-related tension. However, it's particularly beneficial for those experiencing:</p>
+        <ul class="text-white">
+          <li>Back and neck pain</li>
+          <li>Stiff joints and limited mobility</li>
+          <li>Stress-related conditions</li>
+          <li>Sports injuries</li>
+          <li>Headaches and migraines</li>
+        </ul>
+        
+        <h5 class="gold-text mt-4">What to Expect During Your Session</h5>
+        <p>You'll remain fully clothed in comfortable attire provided by us. The massage is performed on a traditional mat on the floor, allowing for full-body stretches. Communication with your therapist ensures the pressure is comfortable throughout the session.</p>
+        
+        <h5 class="gold-text mt-4">Aftercare and Recommendations</h5>
+        <p>After your Thai massage, drink plenty of water to flush out toxins released during the treatment. Avoid strenuous activities for a few hours and allow your body to integrate the benefits. We recommend sessions every 2-4 weeks for optimal maintenance.</p>
+        
+        <div class="text-center mt-4">
+          <button class="btn btn-gold px-4" onclick="openBooking('Thai Yoga Massage'); bootstrap.Modal.getInstance(document.getElementById('blogModal')).hide();">Book Your Thai Massage Now</button>
         </div>
       `;
     }
